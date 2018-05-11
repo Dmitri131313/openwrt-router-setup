@@ -45,30 +45,29 @@ fpopic@lenovo ~> telnet 192.168.1.1
 	  * 1/4 oz Sour mix
 	  * 1 splash Cranberry juice
 	 -----------------------------------------------------
-	root@(none):/# 
+	root@(none):/#
 
-root@(none):/#  mount_root // to mount in write mode
+root@(none):/  mount_root // to mount in write mode
 
-root@(none):/#  firstboot 	// to revert all files to original state
+root@(none):/  firstboot 	// to revert all files to original state
 
-root@(none):/#  passwd   	// set password to enable ssh
+root@(none):/  passwd   	// set password to enable ssh
 
-root@(none):/# /etc/init.d/uhttpd enable  // to enable luci via browser
+root@(none):/  /etc/init.d/uhttpd enable  // to enable luci via browser
 
-root@(none):/# /etc/init.d/uhttpd start
+root@(none):/  /etc/init.d/uhttpd start
 
-root@(none):/# vi /etc/config/network // to change ip addr to 192.168.100.1
+root@(none):/  vi /etc/config/network // to change ip addr to 192.168.100.1
 
-root@(none):/# reboot -f 	// restart router
+root@(none):/  reboot -f 	// restart router
 
 fpopic@lenovo ~> sudo ifconfig enp1s0 192.168.100.99 netmask 255.255.255.0
 
-
+// add new interface wan with dhcp client
+// add new wifi as client (no bridge, to connect to dsl router that has dchp server)
 
 fpopic@lenovo ~> ssh 192.168.100.1 -l root
-
 
 fpopic@lenovo ~> sudo ip addr flush enp1s0  // to remove static ip
 
 fpopic@lenovo ~> sudo service network-manager restart // to use dhcp client
-
