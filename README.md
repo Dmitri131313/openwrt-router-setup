@@ -83,15 +83,7 @@
 	```
 
 3. Turn on dhcp on your PC
-	```bash
-	# use static ip on enp1s0 interface with new subnet .100. to test again ssh
-	sudo ifconfig enp1s0 192.168.100.99 netmask 255.255.255.0
-	
-	# connect using ssh
-	ssh 192.168.100.1 -l root
-  
-	...
-	
+	```bash	
 	# remove static ip
 	sudo ip addr flush enp1s0  
 
@@ -99,3 +91,10 @@
 	sudo service network-manager restart 
 	```
  
+4. If you need ssh access
+	# use static ip on enp1s0 interface with new subnet .100. to test again ssh
+	sudo ifconfig enp1s0 192.168.100.99 netmask 255.255.255.0
+	
+	# connect using ssh
+	ssh 192.168.100.1 -l root
+  	```
