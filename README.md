@@ -93,7 +93,7 @@
  
 4. If you need ssh access
 	```bash
-	# use static ip on enp1s0 interface with new subnet .100. to test again ssh
+	# use static ip on enp1s0 interface with the new subnet .100.
 	sudo ifconfig enp1s0 192.168.100.99 netmask 255.255.255.0
 	
 	# connect using ssh
