@@ -98,3 +98,4 @@
 	# use dhcp client
 	sudo service network-manager restart 
 	```
+ 
