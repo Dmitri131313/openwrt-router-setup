@@ -1,3 +1,5 @@
+# openwrt-router-setup
+
 1. Use static IP address on your PC ethernet interface (turn off dhcp)
 	```bash
 	
@@ -10,7 +12,7 @@
 	# set default gateway
 	sudo route add default gw 192.168.1.1
 	
-	# confirm final configuration
+	# confirm the enp1s0 interface
 	ifconfig enp1s0 
 		
 		enp1s0    Link encap:Ethernet  HWaddr 68:f7:28:09:05:21  
@@ -82,14 +84,14 @@
 
 3. Turn on dhcp on your PC
 	```bash
-	# use static ip on enp1s0 interface with new subnet .100.
+	# use static ip on enp1s0 interface with new subnet .100. to test again ssh
 	sudo ifconfig enp1s0 192.168.100.99 netmask 255.255.255.0
-
-	# add new interface wan with dhcp client
-
-	# add new wifi as client (no bridge, to connect to dsl router that has dchp server)
+	
+	# connect using ssh
 	ssh 192.168.100.1 -l root
-
+  
+	...
+	
 	# remove static ip
 	sudo ip addr flush enp1s0  
 
