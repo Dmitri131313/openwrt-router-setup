@@ -6,7 +6,7 @@
 	# stop network-manager service
 	sudo service network-manager stop
 	
-	# use static ip on enp1s0 interface
+	# use static ip on your ethernet interface (enp1s0)
 	sudo ifconfig enp1s0 192.168.1.2 netmask 255.255.255.0 
 	
 	# set default gateway
@@ -93,7 +93,7 @@
  
 4. If you need ssh access
 	```bash
-	# use static ip on enp1s0 interface with the new subnet .100.
+	# use static ip on your ethernet interface (enp1s0) with the new subnet .100.
 	sudo ifconfig enp1s0 192.168.100.99 netmask 255.255.255.0
 	
 	# connect using ssh
